@@ -1,0 +1,22 @@
+books_collection = [
+        {"id": 1, "title": "Le Petit Prince", "author": "Antoine de Saint-Exupéry", "year": 1943},
+        {"id": 2, "title": "1984", "author": "George Orwell", "year": 1949},
+        {"id": 3, "title": "L'Étranger", "author": "Albert Camus", "year": 1942},
+        {"id": 4, "title": "Le Seigneur des Anneaux", "author": "J.R.R. Tolkien", "year": 1954},
+        {"id": 5, "title": "Cent ans de solitude", "author": "Gabriel García Márquez", "year": 1967},
+        {"id": 6, "title": "Harry Potter à l'école des sorciers", "author": "J.K. Rowling", "year": 1997},
+        {"id": 7, "title": "Orgueil et Préjugés", "author": "Jane Austen", "year": 1813},
+        {"id": 8, "title": "Les Misérables", "author": "Victor Hugo", "year": 1862},
+        {"id": 9, "title": "Gatsby le Magnifique", "author": "F. Scott Fitzgerald", "year": 1925},
+        {"id": 10, "title": "L'Attrape-cœurs", "author": "J.D. Salinger", "year": 1951},
+        {"id": 11, "title": "Le Alchimiste", "author": "Paulo Coelho", "year": 1988},
+        {"id": 12, "title": "Crime et Châtiment", "author": "Fiodor Dostoïevski", "year": 1866},
+        {"id": 13, "title": "Le Vieil Homme et la Mer", "author": "Ernest Hemingway", "year": 1952},
+        {"id": 14, "title": "Fahrenheit 451", "author": "Ray Bradbury", "year": 1953},
+        {"id": 15, "title": "Une brève histoire du temps", "author": "Stephen Hawking", "year": 1988},
+        {"id": 16, "title": "La Métamorphose", "author": "Franz Kafka", "year": 1915},
+        {"id": 17, "title": "Sapiens", "author": "Yuval Noah Harari", "year": 2011},
+        {"id": 18, "title": "Le Nom de la rose", "author": "Umberto Eco", "year": 1980},
+        {"id": 19, "title": "L'Insoutenable Légèreté de l'être", "author": "Milan Kundera", "year": 1984},
+        {"id": 20, "title": "Fondation", "author": "Isaac Asimov", "year": 1951}
+    ]
