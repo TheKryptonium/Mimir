@@ -1,0 +1,24 @@
+{
+    "dbcode.connections": [
+        {
+            "connectionId": "-jtFDFIw9pgtAipGBFg8g",
+            "name": "Mimir",
+            "driver": "postgres",
+            "connectionType": "host",
+            "host": "localhost",
+            "port": 80,
+            "ssl": false,
+            "authMethod": "password",
+            "username": "krypto",
+            "password": "",
+            "savePassword": "secretStorage",
+            "database": "mimir_db",
+            "readOnly": false,
+            "role": "development",
+            "postConnectionSqlType": "inline",
+            "postConnectionSql": "CREATE DATABASE mimir;\r\n",
+            "connectionTimeout": 30,
+            "pinnedConnectionTimeout": "0"
+        }
+    ]
+}
