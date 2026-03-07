@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from .schemas import UserCreateModel, UserModel
 from .service import UserService
 from src.db.main import get_session
-from sqlmodel.ext.asyncio.session import AsyncSession
+from sqlalchemy.ext.asyncio.session import AsyncSession
 
 auth_router = APIRouter()
 user_service = UserService()
@@ -16,3 +16,5 @@ async def create_user(user_data: UserCreateModel, session: AsyncSession = Depend
         raise HTTPException(status.HTTP_403_FORBIDDEN, detail=f"user with {email} already exists")
     else:
         new_user = await user_service.create_user(session, user_data)
+    
+    return new_user
