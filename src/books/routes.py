@@ -1,7 +1,6 @@
 from fastapi import APIRouter, status, HTTPException, Depends
-from typing import Optional, List
+from typing import List
 from sqlmodel.ext.asyncio.session import AsyncSession
-from src.books.data import books_collection
 from src.db.main import get_session
 from .service import BookService
 from src.books.schemas import Book, BookUpdateModel, BookCreateModel
@@ -39,9 +38,9 @@ async def update_book(book_id: str, book_updates: BookUpdateModel, session: Asyn
 
 @book_router.delete('/{book_id}', status_code = status.HTTP_204_NO_CONTENT)
 async def delete_book(book_id: str, session: AsyncSession = Depends(get_session)):
-    book_to_detele = await book_service.delete_book(session, book_id)
+    book_to_delete = await book_service.delete_book(session, book_id)
 
-    if book_to_detele:
-        return book_to_detele
+    if book_to_delete:
+        return book_to_delete
     else:
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Book not found")
