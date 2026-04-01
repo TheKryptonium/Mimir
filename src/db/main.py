@@ -12,11 +12,9 @@ engine = AsyncEngine(
     )
 )
 
-async def init_db()->None:
+async def init_db()->None: #Initialize the database
     async with engine.begin() as conn:
-        from src.books.models import Book
-        
-        await conn.run_sync(SQLModel.metadata.create_all)
+        await conn.run_sync(SQLModel.metadata.create_all) #Create all tables in the database based on the models defined in SQLModel
         
         
 async def get_session()->AsyncSession:
