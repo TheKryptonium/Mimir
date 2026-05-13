@@ -8,13 +8,13 @@ from sqlmodel import select
 class BookService():
     async def get_all_books(self, session:AsyncSession):
         statement = select(Book).order_by(desc(Book.created_at))
-        results = await session.execute(statement)
-        return results.scalars().all()
+        results = await session.exec(statement)
+        return results
     
     async def get_book(self, session: AsyncSession, book_uuid: str):
         statement = select(Book).where(Book.id == book_uuid)
-        results = await session.execute(statement)
-        book = results.scalars().first()
+        results = await session.exec(statement)
+        book = results.first()
         
         return book if book is not None else None
     
