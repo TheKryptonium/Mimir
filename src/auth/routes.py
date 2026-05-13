@@ -3,6 +3,7 @@ from .schemas import UserCreateModel, UserModel
 from .service import UserService
 from src.db.main import get_session
 from sqlalchemy.ext.asyncio.session import AsyncSession
+from .utils import create_token_access, decode_token
 
 auth_router = APIRouter()
 user_service = UserService()
