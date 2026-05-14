@@ -14,12 +14,12 @@ def generate_password(password: str)->str:
 def verify_password(password: str, hash_passowrd: str)->bool:
     return password_context.verify(password, hash_passowrd)
 
-def create_token_access(user_data: dict, expiry: timedelta = None):
+def create_token_access(user_data: dict, expiry: timedelta = None, refresh: bool=False)-> str:
     payload={}
     
     payload["user"] = user_data
     
-    payload["exp"] = datetime.now + expiry if expiry is not None else timedelta(seconds=ACCESS_TOKEN_EXPIRY)
+    payload["exp"] = datetime.now() + (expiry if expiry is not None else timedelta(seconds=ACCESS_TOKEN_EXPIRY))
     
     payload["jti"] = str(uuid.uuid4())
     
@@ -38,7 +38,7 @@ def decode_token(token: str) -> dict:
         token_data = jwt.decode(
             jwt = token,
             key = Config.JWT_SECRET,
-            algorithms=[Config.JWT_ALGORIHTM]
+            algorithms=[Config.JWT_ALGORITHM]
         )
         
         return token_data

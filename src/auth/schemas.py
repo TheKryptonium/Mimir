@@ -23,3 +23,7 @@ class UserCreateModel(BaseModel):
     lastname: str = Field(max_length=20)
     password: str = Field(min_length=6)
     
+
+class UserLoginModel(BaseModel):
+    email: str
+    password: str

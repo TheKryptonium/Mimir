@@ -7,8 +7,7 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str
     
     model_config = SettingsConfigDict(
-        env_file = '.env',
-        extra="ignore"
+        env_file = '.env'
     )
     
 
